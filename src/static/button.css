@@ -1,0 +1,40 @@
+.button-primary {
+  /* min-width: 80px !important; */
+  height: 32px !important;
+  left: 580px !important;
+  top: 424px !important;
+  background: #dc143c !important;
+  border-radius: 5px !important;
+  border: none !important;
+  color: white !important;
+  letter-spacing: 1.3px !important;
+  font-size: 16 !important;
+  width: 80px !important;
+}
+
+.button-blue {
+  /* min-width: 80px !important; */
+  height: 32px !important;
+  left: 580px !important;
+  top: 424px !important;
+  background: #4456f9 !important;
+  border-radius: 5px !important;
+  border: none !important;
+  color: white !important;
+  letter-spacing: 1.1px !important;
+  font-size: 16 !important;
+  width: 80px !important;
+}
+
+.fluid {
+  width: 100% !important;
+}
+
+.btn {
+  height: 46px !important;
+
+  border-radius: 0px !important;
+  border: none !important;
+
+  font-size: medium !important;
+}

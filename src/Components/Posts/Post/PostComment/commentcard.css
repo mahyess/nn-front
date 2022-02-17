@@ -1,0 +1,56 @@
+.comment-avatar {
+  padding-right: 8px;
+}
+
+.comment-avatar img {
+  height: 32px !important;
+  width: 32px;
+  object-fit: cover;
+  border-radius: 40px;
+  border: solid 2px;
+}
+
+/* css for comment text */
+.comment-text {
+  width: 230px !important;
+
+}
+
+
+/*tablet*/
+@media  only screen and (min-width:550px) and (max-width:768px) {
+  .comment-text {
+    width: 540px !important;
+
+
+  }
+}
+
+/*desktop*/
+@media only screen and (min-width:769px) {
+  .comment-text {
+    width: 450px !important;
+
+
+  }
+}
+/* Landscape*/
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px)
+and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
+  .comment-text {
+    width: 450px !important;
+
+
+  }
+}
+
+/* Portrait*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px)
+and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+  .comment-text {
+    width: 250px !important;
+
+
+  }
+}

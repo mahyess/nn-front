@@ -1,0 +1,11 @@
+/* @media only screen and (max-width: 1000px) {
+  .wholeSidebar {
+    display: none;
+  }
+} */
+
+.ui.label > img {
+  width: auto !important;
+  vertical-align: middle;
+  height: 10px !important;
+}

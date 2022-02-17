@@ -1,0 +1,18 @@
+.postcard {
+  width: 95% !important;
+  margin-bottom: 8px !important;
+  border-radius: 0 !important;
+  margin: auto !important;
+}
+
+/* .postcard:first {
+  margin-top: 100px;
+  padding-top: 100px;
+} */
+
+@media only screen and (max-width: 768px) {
+  .postcard {
+    width: 100% !important;
+    margin: auto !important;
+  }
+}
