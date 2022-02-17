@@ -14,54 +14,56 @@ import AuthLogin from "./AuthLogin"
 import Signup from "./Signup"
 import { connect } from "react-redux"
 
-class Login
-   extends Component {
+interface loginProps {
+   page: string
+}
+class Login extends Component<loginProps> {
    render() {
       return (
-         <Container fluid style={ { backgroundColor: "#f0f0f0", height: "90vh" } }>
+         <Container fluid style={{ backgroundColor: "#f0f0f0", height: "90vh" }}>
             <Container className="grid-padding">
                <Grid>
-                  <Grid.Row style={ { marginTop: "50px" } } centered>
+                  <Grid.Row style={{ marginTop: "50px" }} centered>
                      <GridColumn
-                        as={ Responsive }
-                        { ...Responsive.onlyComputer }
-                        computer={ 6 }
+                        as={Responsive}
+                        {...Responsive.onlyComputer}
+                        computer={6}
                      >
                         <Segment piled>
-                           <Image centered src={ logo } size="tiny"/>
+                           <Image centered src={logo} size="tiny" />
                            <Header as="h1" dividing textAlign="center">
                               NamasteNepal
-                              <Header.Subheader style={ { padding: "9px" } }>
+                              <Header.Subheader style={{ padding: "9px" }}>
                                  Connect With Your Community
                               </Header.Subheader>
                            </Header>
                            <List relaxed="very">
                               <List.Item>
-                                 <List.Icon name="users" size="big" color="blue"/>
+                                 <List.Icon name="users" size="big" color="blue" />
                                  <List.Content>
                                     Meet all peoples from all over the world
                                  </List.Content>
                               </List.Item>
                               <List.Item>
-                                 <List.Icon name="newspaper" size="big" color="grey"/>
+                                 <List.Icon name="newspaper" size="big" color="grey" />
                                  <List.Content>
                                     Get Connected with Communities
                                  </List.Content>
                               </List.Item>
                               <List.Item>
-                                 <List.Icon name="share" size="big" color="orange"/>
+                                 <List.Icon name="share" size="big" color="orange" />
                                  <List.Content>
                                     Share your thoughts and knowledge with others .
                                  </List.Content>
                               </List.Item>
                               <List.Item>
-                                 <List.Icon name="heart" size="big" color="red"/>
+                                 <List.Icon name="heart" size="big" color="red" />
                                  <List.Content>
                                     Make a good relationship with peoples
                                  </List.Content>
                               </List.Item>
                               <List.Item>
-                                 <List.Icon name="star" size="big" color="yellow"/>
+                                 <List.Icon name="star" size="big" color="yellow" />
                                  <List.Content>
                                     Earn badges for the events and points for the good
                                     deeds.
@@ -82,9 +84,9 @@ class Login
                         }
                      </GridColumn>
 
-                     <GridColumn computer={ 7 } mobile={ 16 }>
-                        <Segment style={ { padding: 0 } }>
-                           { this.props.page === "login" ? <AuthLogin/> : <Signup/> }
+                     <GridColumn computer={7} mobile={16}>
+                        <Segment style={{ padding: 0 }}>
+                           {this.props.page === "login" ? <AuthLogin /> : <Signup />}
                         </Segment>
                      </GridColumn>
                   </Grid.Row>
@@ -95,11 +97,11 @@ class Login
    }
 }
 
-const mapStateToProps = ( state ) => ( {
+const mapStateToProps = (state: { misc: { page: string } }) => ({
    page: state.misc.page,
-} )
-// const mapDispatchToProps = (dispatch) => ({
+})
+// const mapDispatchToProps = (dispatch: any) => ({
 //   changeAuthPage: (page) => dispatch(changeAuthPage(page)),
 // });
 
-export default connect( mapStateToProps, null )( Login )
+export default connect(mapStateToProps, null)(Login)

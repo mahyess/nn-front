@@ -3,7 +3,12 @@ import { isAuth } from "./actions/authActions";
 import React, { Component } from "react";
 import MainRoute from "./Components/route";
 
-class App extends Component {
+
+interface Props {
+  isAuth: () => any
+}
+
+class App extends Component<Props> {
   componentDidMount = () => {
     this.props.isAuth();
   }
@@ -13,9 +18,9 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-    isAuth: () => dispatch(isAuth()),
-  })
+const mapDispatchToProps = (dispatch: any) => ({
+  isAuth: () => dispatch(isAuth()),
+})
 
 
 export default connect(null, mapDispatchToProps)(App);

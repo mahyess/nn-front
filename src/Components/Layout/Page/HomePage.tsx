@@ -5,16 +5,7 @@ import Chautari from "../../Chautari/Chautari"
 
 export default class HomePage
    extends Component {
-   constructor( props ) {
-      super( props )
-      this.state = {
-         username: "",
-         password: "",
-         errors: {},
-         buttonDisabled: false,
-         page: "login",
-      }
-   }
+
 
    render = () => (
       <React.Fragment>
@@ -22,7 +13,7 @@ export default class HomePage
             <Grid.Row>
                <Grid.Column>
                   <Container>
-                     <Chautari/>
+                     <Chautari />
                   </Container>
                </Grid.Column>
             </Grid.Row>

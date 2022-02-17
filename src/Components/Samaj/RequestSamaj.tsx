@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Card, Grid, Form} from "semantic-ui-react";
+import { Button, Card, Grid, Form } from "semantic-ui-react";
 import { connect } from "react-redux";
 import { requestSamaj } from "src/actions/samajActions";
 
@@ -18,7 +18,7 @@ class RequestSamaj extends Component {
     let files = e.target.files;
     let reader = new FileReader();
     reader.onload = (r) => {
-      this.setState({ iconFile: r.target.result }, () => {});
+      this.setState({ iconFile: r.target.result }, () => { });
     };
     reader.readAsDataURL(files[0]);
   };
@@ -26,7 +26,7 @@ class RequestSamaj extends Component {
     let files = e.target.files;
     let reader = new FileReader();
     reader.onload = (r) => {
-      this.setState({ coverFile: r.target.result }, () => {});
+      this.setState({ coverFile: r.target.result }, () => { });
     };
     reader.readAsDataURL(files[0]);
   };
@@ -113,7 +113,7 @@ class RequestSamaj extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch: any) => ({
   requestSamaj: (data) => dispatch(requestSamaj(data)),
 });
 

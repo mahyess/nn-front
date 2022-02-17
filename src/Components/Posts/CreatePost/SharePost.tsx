@@ -166,7 +166,7 @@ export const mapStateToProps = (state) => {
   };
 };
 
-export const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch: any) => {
   return {
     getMySamajList: () => dispatch(getMySamajList()),
     addPost: (formData) => dispatch(addSamajPost(formData)),
